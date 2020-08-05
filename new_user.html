@@ -13,6 +13,10 @@
                 $("#c_pass").html("Password not match!")
             }
             else{}
+
+            $(document).ready(function(){
+                $("#pass,#c_pass").keyup(password_match)
+            });
         }
         </script>
     </head>
