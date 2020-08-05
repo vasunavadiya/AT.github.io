@@ -4,23 +4,7 @@
         <link rel="stylesheet" href="new_user.css">
         
         <script type="text/javascript">
-        document.querySelector('.btn').onclick=function(){
-            var password = document.querySelector('.pass').value;
-            var c_password = document.querySelector('.c_pass').value;
-            if(password == "")
-            {
-                alert("password is EMpty");
-            }
-            else if(password != c_password)
-            {
-                alert("password didnot match");
-            }
-            else{
-                alert("all ok")   
-            }
-            return true;
-
-        }
+        
         </script>
     </head>
     <body>
@@ -46,11 +30,11 @@
                 
 
                 
-                <input type="password" name="password" class="pass" id="pass" placeholder="Enter Password" required>
+                <input type="password" name="password" id="pass" placeholder="Enter Password" required>
                 
                 <p>Confirm Password</p>
                 
-                <input type="password" name="c_password" class="c_pass" id="c_pass"placeholder="Confirm Password" required >
+                <input type="password" name="c_password" id="c_pass"placeholder="Confirm Password" required >
                 <div class="registrationFormAlert" id="Check_PasswordMatch">
                 </div>
                 <input type="radio" name="Customer_acc" value="Are you Customer?">Are you Customer?
@@ -59,7 +43,7 @@
                 OR
                 <input type="radio" name="Customer_acc" value="Are you Shopkeeper?">Are you Shopkeeper?
 
-                <button class="btn"  type="submit">Submit Details</button > 
+                <button  type="submit">Submit Details</button > 
                     <br>
                     <a href="index.html" > login page </a>
         </form>
