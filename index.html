@@ -25,7 +25,7 @@
 		// 		$("#email").css("border","2px solid red");
 		// 		$("#emailMsg").html("<p class='text-danger'>Invalid</p>");
 		// 	}
-		// 	buttonState();
+			buttonState();
 		// });
 		// use keyup event on password
 		$("#pass").keyup(function(){
@@ -64,10 +64,12 @@
 		// check it s length
 		if(pass.length > 7){
 			
-			//$("#pass").css("password-color "," green");
+			$("#pass").css("border","2px solid green");
+			//$("#pass").css("pass-color","green");
 			return true;
 		}else{
-			document.getElementById("errorSpan").innerHTML = "Min lenght 8";
+			$("#pass").css("border","2px solid red");
+			
 			return false;
 		}
 

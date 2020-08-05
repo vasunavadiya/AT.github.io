@@ -2,21 +2,24 @@
     <head>
         <title>Register</title>
         <link rel="stylesheet" href="new_user.css">
-        <script type="text/javascript">
         
-
-        function password_match(){
-            var password=$(#pass).val();
-            var c_password=$(#c_pass).val();
-            if (password != c_password)
+        <script type="text/javascript">
+        document.querySelector('.btn').onclick=function(){
+            var password = document.querySelector("#pass").value;
+            var c_password = document.querySelector("#c_pass").value;
+            if(password == "")
             {
-                $("#c_pass").html("Password not match!")
+                alert("password is EMpty");
             }
-            else{}
+            else if(password != c_password)
+            {
+                alert("password didnot match");
+            }
+            else{
+                alert("all ok")   
+            }
+            return true;
 
-            $(document).ready(function(){
-                $("#pass,#c_pass").keyup(password_match)
-            });
         }
         </script>
     </head>
@@ -26,7 +29,7 @@
             
             <div class="form">
                 
-            <form action="./succ_registed.html" method="GET">
+            <form action="./succ_registed.html" method="POST">
                 <p>Name</p> 
                 <input type="text" placeholder="Enter  your name " required> 
                 
@@ -48,14 +51,15 @@
                 <p>Confirm Password</p>
                 
                 <input type="password" name="c_password" id="c_pass"placeholder="Confirm Password" required >
-                
+                <div class="registrationFormAlert" id="Check_PasswordMatch">
+                </div>
                 <input type="radio" name="Customer_acc" value="Are you Customer?">Are you Customer?
                 <br>
                 <br>
                 OR
                 <input type="radio" name="Customer_acc" value="Are you Shopkeeper?">Are you Shopkeeper?
 
-                <button  type="submit">Submit Details</button > 
+                <button class="btn"  type="submit">Submit Details</button > 
                     <br>
                     <a href="index.html" > login page </a>
         </form>
